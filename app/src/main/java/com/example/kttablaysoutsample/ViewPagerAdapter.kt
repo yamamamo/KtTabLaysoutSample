@@ -6,7 +6,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
 
-class FragmentAdapter (
+class ViewPagerAdapter (
     fragmentManager:FragmentManager,
     lifecycle: Lifecycle): FragmentStateAdapter(fragmentManager,lifecycle) {
 
@@ -18,7 +18,7 @@ class FragmentAdapter (
             1 -> Fragment2()
             2 -> Fragment3()
             3 -> Fragment4()
-            else -> Fragment1()
+            else -> Fragment4()
         }
     }
 
