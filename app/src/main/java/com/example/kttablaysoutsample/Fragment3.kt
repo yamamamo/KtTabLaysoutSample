@@ -8,17 +8,19 @@ import android.view.ViewGroup
 
 class Fragment3 : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_3, container, false)
+    }
+
+    private fun newInstant() : Fragment3 {
+        val args = Bundle()
+        val frag = Fragment3()
+        frag.arguments = args
+        return frag
     }
 
 }
