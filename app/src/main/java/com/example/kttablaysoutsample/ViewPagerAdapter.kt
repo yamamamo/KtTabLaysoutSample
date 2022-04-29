@@ -18,7 +18,7 @@ class ViewPagerAdapter (
             1 -> Fragment2()
             2 -> Fragment3()
             3 -> Fragment4()
-            else -> Fragment4()
+            else -> Fragment1()
         }
     }
 
