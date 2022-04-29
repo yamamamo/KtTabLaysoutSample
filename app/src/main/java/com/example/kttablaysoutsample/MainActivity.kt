@@ -23,10 +23,12 @@ class MainActivity : AppCompatActivity() {
         val viewPager = binding.pager
         val tabLayout = binding.tabLayout
 
-        viewPager.adapter = ViewPagerAdapter(supportFragmentManager, lifecycle)
+        viewPager.adapter = ViewPagerAdapter(supportFragmentManager,lifecycle)
 
         TabLayoutMediator(tabLayout,viewPager){tab,position ->
             tab.text = tabTitleArray[position]
         }.attach()
+
+        viewPager.isUserInputEnabled = false //뷰페이저 스와이프 가능 유무. false = 스와이프 x, true = 스와이프 o
     }
 }
